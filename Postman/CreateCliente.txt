@@ -1,0 +1,25 @@
+Create Cliente
+-- Request
+{
+    "idCliente":"1000596251",
+    "nombre":"Juan Camilo",
+    "apellido":"Panqueva Benitez",
+    "dni":"Ciudad Jardin",
+    "telefono":"123456789",
+    "email":"panqueva123@hotmail.com"
+
+}
+
+-- Response
+{
+    "cliente": {
+        "idCliente": 1000596251,
+        "nombre": "Juan Camilo",
+        "apellido": "Panqueva Benitez",
+        "dni": "Ciudad Jardin",
+        "telefono": "123456789",
+        "email": "panqueva123@hotmail.com",
+        "ventaList": null
+    },
+    "mensaje": "El cliente se ha creado con éxito"
+}

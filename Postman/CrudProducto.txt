@@ -1,0 +1,59 @@
+------ Crud Producto
+-- Request
+
+{
+    "idProducto":1,
+    "nombre":"Bicicleta",
+    "precio":5000
+}
+
+-- Response
+{
+    "mensaje": "El cliente se ha creado con éxito",
+    "producto": {
+        "idProducto": 1,
+        "nombre": "Bicicleta",
+        "precio": 5000,
+        "detalleVentaList": null
+    }
+}
+
+-------- Update
+-- Request
+{
+    "idProducto":1,
+    "nombre":"Computadores",
+    "precio":9000
+}
+
+-- Response
+{
+    "mensaje": "El producto se ha actualizado con éxito",
+    "producto": {
+        "idProducto": 1,
+        "nombre": "Computadores",
+        "precio": 9000,
+        "detalleVentaList": []
+    }
+}
+
+------- Consult
+http://localhost:8080/CRV/productos/1
+
+-- Response
+
+{
+    "idProducto": 1,
+    "nombre": "Computadores",
+    "precio": 9000,
+    "detalleVentaList": []
+}
+
+-------- Delete
+http://localhost:8080/CRV/productos/1
+
+-- Response
+
+{
+    "mensaje": "El producto se ha eliminado con éxito"
+}

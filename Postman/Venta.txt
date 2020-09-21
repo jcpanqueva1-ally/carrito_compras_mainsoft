@@ -1,0 +1,51 @@
+-- Venta
+-- CREATE
+-- Request
+{
+    "idventa":1,
+    "clienteIdcliente":{
+         "idcliente": 1000596251,
+        "nombre": "Juan Camilo",
+        "apellido": "Panqueva Benitez",
+        "dni": "Ciudad Jardin",
+        "telefono": "123456789",
+        "email": "panqueva123@hotmail.com",
+        "ventaList": null
+    },
+    "detalleVentaIddetalleVenta":{
+        "iddetalleVenta":1,
+        "productoIdproducto":{
+                "idproducto": 1,
+                "nombre": "Bicicleta",
+                "precio": 5000,
+                "detalleVentaList": null
+        }
+    }
+
+}
+
+-- Response
+{
+    "venta": {
+        "idventa": 1,
+        "fecha": null,
+        "clienteIdcliente": {
+            "idcliente": 1000596251,
+            "nombre": "Juan Camilo",
+            "apellido": "Panqueva Benitez",
+            "dni": "Ciudad Jardin",
+            "telefono": "123456789",
+            "email": "panqueva123@hotmail.com"
+        },
+        "detalleVentaIddetalleVenta": {
+            "iddetalleVenta": 1,
+            "ventaList": null,
+            "productoIdproducto": {
+                "idproducto": 1,
+                "nombre": "Bicicleta",
+                "precio": 5000
+            }
+        }
+    },
+    "mensaje": "El cliente se ha creado con éxito"
+}

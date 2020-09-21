@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "e3147eb1-69cf-4e9a-9e2c-643219685b88",
+		"name": "mainsoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IHVzZXIiLCJ1c2VyX25hbWUiOiJ1c2VyIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImFwZWxsaWRvIjoiUGFucXVldmEiLCJleHAiOjE2MDA2NjkxMjMsIm5vbWJyZSI6Ikp1YW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiM2ZiNzQ2YTYtOGUzYi00NGI3LTk2MTEtNmNiNDAyNDdmMDI3IiwiZW1haWwiOiJwYW5xZXV2YTc2M0BnbWFpbCIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.GrvQnPzYrbzvN_eLTwuloIUPmtY78-I1EnR463NVbQFwO8bdjJAEbtK7_r2CE_lzAOPyYdC09_rxJnsgTwQTC4o6UcAs54p5lA9TcbMVy03yqri1PoLHnmA7KgSTDjMq1AwFxxih65TqoSPeeSmWxKRAUZJbPRUDczp7G9v30oc_fxmfDpgTk9Zcv0k_xnEGyzrYLBAZijjcPgAN0mVJSH7fWYx9OHgC37as_jsz5e1zq0v3MirQI_oQ_3yv_lM0pk6UlnrBf3LiaegcLHWgJjYFCZ9bbtpEv-d2P8nauj6yrPFnxO4O_pz_F6aSoyOtXbX2FPwmUUmM-mpq-N2T1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idcliente\":\"1000596251\",\r\n    \"nombre\":\"Juan Camilo\",\r\n    \"apellido\":\"Panqueva Benitez\",\r\n    \"dni\":\"Ciudad Jardin\",\r\n    \"telefono\":\"123456789\",\r\n    \"email\":\"panqueva123@hotmail.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/CRV/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CRV",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE productos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":1,\r\n    \"nombre\":\"Bicicleta\",\r\n    \"precio\":5000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/CRV/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CRV",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE productos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProducto\":1,\r\n    \"nombre\":\"Computadores\",\r\n    \"precio\":9000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/CRV/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CRV",
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/CRV/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CRV",
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE productos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/CRV/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CRV",
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST obtenerToken",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "angularapp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE venta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFkbWluIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJQYW5xdWV2YSIsImV4cCI6MTYwMDY3MDEwMiwibm9tYnJlIjoiU2FyYSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiZWIxMWRiZTAtMzQ0Zi00MzllLTgwMzItYmYwNDM1MDJjYzExIiwiZW1haWwiOiJzYXJhc29maWEyNjEwQGdtYWlsLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.QCUcNc7bayl9bR3jOHMO7ZLKGlKCot45t_EFYqwOoFviuMCCsYN6yemNv5hIvbbyhB9wbo_u1Ut5o-hJDoEH_Pf85fgtxZ3QH7IKfPCSO6qEqhQBOG55WSRDFipiBI3UJrO2safhC5FsNMxyb-dWKROcI1PEfPk-CJl4rvN3T3dHXOkCoauBj8dqcR3wpWQqvX5KRxAMydrRTRgyaTniYpVeCCrlMoKoCrRb_2-kpTVgmpY6zBA9wB9fUtBmhiwRcxssexGBYp8Jglzjyt8bWbbMoUfXy121j2JKYm7w7mCIlTJhBM_X-G9kfTDsg4mRvElQwaBDzufTSqcTjoCMTw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idventa\":1,\r\n    \"clienteIdcliente\":{\r\n         \"idcliente\": 1000596251,\r\n        \"nombre\": \"Juan Camilo\",\r\n        \"apellido\": \"Panqueva Benitez\",\r\n        \"dni\": \"Ciudad Jardin\",\r\n        \"telefono\": \"123456789\",\r\n        \"email\": \"panqueva123@hotmail.com\",\r\n        \"ventaList\": null\r\n    },\r\n    \"detalleVentaIddetalleVenta\":{\r\n        \"iddetalleVenta\":1,\r\n        \"productoIdproducto\":{\r\n                \"idproducto\": 1,\r\n                \"nombre\": \"Bicicleta\",\r\n                \"precio\": 5000,\r\n                \"detalleVentaList\": null\r\n        }\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/CRV/ventas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CRV",
+						"ventas"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
